@@ -7,4 +7,4 @@ docker build -t flask-app .
 docker run -d -p 5000:5000 --name flask-app --network trionet flask-app
 cd ../db
 docker build -t mysql .
-docker run -d -p --name mysql --network trionet mysql
+docker run -d --name mysql --network trionet mysql
