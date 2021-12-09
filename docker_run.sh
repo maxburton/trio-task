@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 docker network create trionet
 cd nginx
 docker run -d -p 80:80 --name nginx --network trionet --mount type=bind,source=$(pwd)/nginx.conf,target=/etc/nginx/nginx.conf nginx
